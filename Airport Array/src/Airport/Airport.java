@@ -1,6 +1,10 @@
 package Airport;
 
 
+/**
+ * This class represents Airport
+ */
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -81,7 +85,10 @@ public class Airport {
 	
 	}
 
-	
+	/**
+	 * This method initializes the passenger array passed in parameter.
+	 * @param Passenger array - passenger
+	 */
 	private static void initialise(Passenger[] passenger) {
 		for(int x=0; x<30;x++){
 			passenger[x]=new Passenger();
