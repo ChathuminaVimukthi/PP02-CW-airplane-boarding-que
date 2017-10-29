@@ -5,11 +5,11 @@ public class Passenger {
 	private String lastName;
 	private int time;
 	
-	public void setfirstName(String firstName){
+	public void setfirstName(String firstName){ // set passenger's first name
 		this.firstName = firstName;
 	}
 	
-	public String getfirstName(){
+	public String getfirstName(){ // get passenger's first name
 		return this.firstName;
 	}
 	
