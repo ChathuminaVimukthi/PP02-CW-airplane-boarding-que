@@ -1,5 +1,5 @@
 package Airport;
-
+//code for airport boarding queue
 
 import java.io.File;
 import java.io.FileNotFoundException;
