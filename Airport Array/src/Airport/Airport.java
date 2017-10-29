@@ -13,7 +13,8 @@ public class Airport {
 	String menu = null;
 	
 	initialise(passenger);
-	
+
+	// Print out instructions to the user
 	do{
 		System.out.println("\n ****************** Welcome to SL Ariways ******************* \n");
 		System.out.println("A:to Add passengers to the boarding queue");
@@ -27,7 +28,8 @@ public class Airport {
 		
 		Scanner sc = new Scanner(System.in);
 		menu = sc.next().toUpperCase();
-		
+
+		// Process user input and take corresponding action
 		switch(menu){
 		case "A" :{
 			queue.addQueue();
@@ -52,13 +54,15 @@ public class Airport {
 		case "R" :{
 			File inputfile = new File("passengers.dat");
 
+			//This method gets the value of instance variable time
+
 			try {
 				Scanner infile = new Scanner(inputfile);
 				int x=0;
 
 				while(x<30){	
-					passenger[x].setfirstName(infile.next());	
-					passenger[x].setlastName(infile.next());
+					passenger[x].setfirstName(infile.next()); //Sets the first name for the passenger.
+					passenger[x].setlastName(infile.next()); //Sets the last name for the passenger.
 					x++;	
 				}
 
@@ -80,7 +84,7 @@ public class Airport {
 	
 	
 	}
-
+	
 	
 	private static void initialise(Passenger[] passenger) {
 		for(int x=0; x<30;x++){
