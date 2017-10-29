@@ -1,10 +1,16 @@
+
 package Airport;
 
+//Class for storing passengers information
 public class Passenger {
+
+	//declaring variables for storing there named resources
 	private String firstName;
 	private String lastName;
 	private int time;
 	
+
+	//getter and setter
 	public void setfirstName(String firstName){
 		this.firstName = firstName;
 	}
