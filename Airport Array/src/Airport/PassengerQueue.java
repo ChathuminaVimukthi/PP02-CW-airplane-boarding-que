@@ -1,33 +1,37 @@
 package Airport;
-
+// importing packages for Scanner,IOException,File etc.
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
-
+// create a PassengerQueue class.
 public class PassengerQueue {
-	private int capacity;
+	// enter the capacities of front and last.
+private int capacity;
 	int front = 0;
 	int last = 0;
 	int Size = 0;
 	
 	
-	
+	// Use scanner.
 	static Scanner sc = new Scanner(System.in);
 
-	
+	// Avail 20 passengers.
 	Passenger[] passengerQueue = new Passenger[20];
-	
+
+	//initialize the int variable for queueSize.
 	public PassengerQueue(int queueSize) {//intializing the capacity to array size
 		this.capacity=queueSize;
 		passengerQueue = new Passenger[this.capacity];
 		initialize(passengerQueue);
 	}
-	
+	// initialize the passengerqueue variable.
 	public void initialize(Passenger[] PassengerQueue){
-		for(int i=0;i<passengerQueue.length;i++){
-			passengerQueue[i] = new Passenger();
+// enter the for loop for the passengerQueue having initial value of zero.
+	for(int i=0;i<passengerQueue.length;i++){
+		passengerQueue[i] = new Passenger();
+// set the first & last name to the null.
 			passengerQueue[i].setfirstName("null");
 			passengerQueue[i].setlastName("null");
 		}
@@ -42,10 +46,12 @@ public void addQueue() {//adding passengers to the queue array
             if(last == capacity-1){
                 last = 0;
             }
+//return output "Enter passenger's first name".
             System.out.print("Enter passenger's first name:");
             passengerQueue[last].setfirstName(sc.next().toUpperCase());
-            System.out.print("Enter passenger's last name:");
+//return output "Enter passenger's last name".
             passengerQueue[last].setlastName(sc.next().toUpperCase());
+//return output "Enter passenger's delay time".
             System.out.print("Enter passenger's delay time:");
             passengerQueue[last].setSecondInQueue(sc.nextInt());
             System.out.println(passengerQueue[last].getfirstName()+" "+passengerQueue[last].getlastName()+" is added to Queue.");
