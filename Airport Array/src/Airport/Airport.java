@@ -6,14 +6,17 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Airport {
-	static Passenger[] passenger = new Passenger[30];
+	static Passenger[] passenger = new Passenger[30]; //creates an array of 30 passengers
 	public static void main(String[] args) throws FileNotFoundException{
-	PassengerQueue queue = new PassengerQueue(20);
+	PassengerQueue queue = new PassengerQueue(20); //creates queue of passengers
 
 	String menu = null;
 	
-	initialise(passenger);
+	initialise(passenger); //initializes the array of passengers setting all of them to null 
 	
+	
+	//this outputes the menu to the user	
+		
 	do{
 		System.out.println("\n ****************** Welcome to SL Ariways ******************* \n");
 		System.out.println("A:to Add passengers to the boarding queue");
@@ -25,10 +28,10 @@ public class Airport {
 		System.out.println("X:to Exit the program  \n");
 		System.out.println("Please enter your input");
 		
-		Scanner sc = new Scanner(System.in);
-		menu = sc.next().toUpperCase();
+		Scanner sc = new Scanner(System.in); //gets the entered input from the user
+		menu = sc.next().toUpperCase(); //puts the entered value from the user in uppercase
 		
-		switch(menu){
+		switch(menu){ //chooses the correct case based on user input
 		case "A" :{
 			queue.addQueue();
 			break;
@@ -81,7 +84,7 @@ public class Airport {
 	
 	}
 
-	
+	//this function initialises the array of passengers
 	private static void initialise(Passenger[] passenger) {
 		for(int x=0; x<30;x++){
 			passenger[x]=new Passenger();
