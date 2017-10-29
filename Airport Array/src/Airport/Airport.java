@@ -1,3 +1,4 @@
+//This is  java code for airplane boarding queue
 package Airport;
 
 
@@ -6,9 +7,9 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Airport {
-	static Passenger[] passenger = new Passenger[30];
+	static Passenger[] passenger = new Passenger[30];//declaring array of passengers objects
 	public static void main(String[] args) throws FileNotFoundException{
-	PassengerQueue queue = new PassengerQueue(20);
+	PassengerQueue queue = new PassengerQueue(20);//creating a queue data structure with size of 20
 
 	String menu = null;
 	
@@ -76,7 +77,7 @@ public class Airport {
 		}
 		}
 		
-	}while(menu != "X");
+	}while(menu != "X");//the userinput stops when the user enters "X"
 	
 	
 	}
@@ -84,7 +85,7 @@ public class Airport {
 	
 	private static void initialise(Passenger[] passenger) {
 		for(int x=0; x<30;x++){
-			passenger[x]=new Passenger();
+			passenger[x]=new Passenger();//creating new passenger objecr
 			passenger[x].setfirstName("null");
 			
 		}		
