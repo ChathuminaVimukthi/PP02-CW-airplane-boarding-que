@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Airport {
+	
 	static Passenger[] passenger = new Passenger[30];
 	public static void main(String[] args) throws FileNotFoundException{
 	PassengerQueue queue = new PassengerQueue(20);
@@ -80,7 +81,7 @@ public class Airport {
 	
 	
 	}
-
+//this is the initialise method
 	
 	private static void initialise(Passenger[] passenger) {
 		for(int x=0; x<30;x++){
