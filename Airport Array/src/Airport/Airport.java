@@ -13,7 +13,7 @@ public class Airport {
 	String menu = null;
 	
 	initialise(passenger);
-	
+	// Display instructions to the user
 	do{
 		System.out.println("\n ****************** Welcome to SL Ariways ******************* \n");
 		System.out.println("A:to Add passengers to the boarding queue");
@@ -27,7 +27,7 @@ public class Airport {
 		
 		Scanner sc = new Scanner(System.in);
 		menu = sc.next().toUpperCase();
-		
+		// Process user input and take corresponding action
 		switch(menu){
 		case "A" :{
 			queue.addQueue();
@@ -53,6 +53,7 @@ public class Airport {
 			File inputfile = new File("passengers.dat");
 
 			try {
+				// Loop through passenger list and create the queue
 				Scanner infile = new Scanner(inputfile);
 				int x=0;
 
