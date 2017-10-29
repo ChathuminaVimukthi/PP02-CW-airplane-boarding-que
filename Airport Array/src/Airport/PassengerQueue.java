@@ -1,5 +1,8 @@
 package Airport;
 
+/**
+ * This class represents Passenger Queue
+ */
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -19,12 +22,21 @@ public class PassengerQueue {
 	
 	Passenger[] passengerQueue = new Passenger[20];
 	
+	/**
+	 * Initializes instance variables of class PassengerQueue
+	 * @param queueSize : int
+	 */
 	public PassengerQueue(int queueSize) {//intializing the capacity to array size
 		this.capacity=queueSize;
 		passengerQueue = new Passenger[this.capacity];
 		initialize(passengerQueue);
 	}
 	
+	
+	/**
+	 * This method initializes firstname and lastname of passengers in PassengerQueue object array with null
+	 * @param PassengerQueue : Passenger[]
+	 */
 	public void initialize(Passenger[] PassengerQueue){
 		for(int i=0;i<passengerQueue.length;i++){
 			passengerQueue[i] = new Passenger();
@@ -33,7 +45,9 @@ public class PassengerQueue {
 		}
 	}
 	
-	
+    /**
+     * This method adds passeneger detail in queue. It shows appropriate message if queue is full.
+     */
 public void addQueue() {//adding passengers to the queue array
         
         if (isQueueFull()) {
@@ -56,6 +70,9 @@ public void addQueue() {//adding passengers to the queue array
         }
     }
 	
+    /**
+     * This method deletes the passeneger details from queue if it is not empty. It shows appropriate message if queue is empty.
+     */
 public void deleteQueue() {//deleting the first passenger in the queue array
 	if (isQueueEmpty()) {
 		System.out.println("Queue is Empty. No data to delete");
@@ -81,6 +98,9 @@ public void deleteQueue() {//deleting the first passenger in the queue array
 	}
 }
 
+    /**
+     * This method saves the passenger details in Passenger.txt file
+     */
 	public void saveQueue(){
 		try {
 			// getting the passenger text file
@@ -104,7 +124,10 @@ public void deleteQueue() {//deleting the first passenger in the queue array
 	}
 	
 	
-	
+	/**
+	 * This method is used to display passenger details who are in queue if the queue is not empty. 
+	 * It shows appropriate message if queue is empty.
+	 */
 	public void viewQueue(){
 		if(isQueueEmpty()){
 			System.out.println("Empty Queue!! No data to view");
@@ -117,6 +140,9 @@ public void deleteQueue() {//deleting the first passenger in the queue array
 		}
 	}
 	
+	/**
+     * This method loads the passenger details from Passenger.txt file
+     */
 	public void load() {
 		Scanner scanning = null;
 		try {
@@ -145,7 +171,10 @@ public void deleteQueue() {//deleting the first passenger in the queue array
 	}
 	
 	
-	
+	/**
+     * This method checks if queue is full
+     * @return boolean
+     */
 	boolean isQueueFull(){
 		boolean status = false;
 		if (Size == 20){
@@ -154,6 +183,10 @@ public void deleteQueue() {//deleting the first passenger in the queue array
 		return status;
 	}
 
+	/**
+	 * This method checks if queue is empty
+	 * @return boolean
+	 */
 	boolean isQueueEmpty(){
 		boolean status = false;
 		if (Size == 0){
@@ -162,6 +195,10 @@ public void deleteQueue() {//deleting the first passenger in the queue array
 		return status;
 	}
 
+	/**
+	 * This method simulates the queue
+	 * @throws FileNotFoundException
+	 */
 	public void simulateQueue() throws FileNotFoundException {
 		initialize(passengerQueue);//to remove current entries of the queue
 
@@ -312,11 +349,18 @@ public void deleteQueue() {//deleting the first passenger in the queue array
 		
 	}
 	
+	/**
+	 * This method uses the alogrithm a+b*c to generate a random integer between 1 and 6.
+	 */
 	public static int D6() {
         return (int) (1 + 6 * Math.random());
 	}
 
 
+	/**
+	 * 
+	 * @param int : n
+	 */
 	public static int nD6(int n) {
     int sum = 0;
     for (int i = 0; i < n; i++) {
