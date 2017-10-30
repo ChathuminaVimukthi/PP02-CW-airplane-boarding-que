@@ -10,7 +10,7 @@ public class Airport {
 	public static void main(String[] args) throws FileNotFoundException{
 	PassengerQueue queue = new PassengerQueue(20);//creating a queue data structure with size of 20
 
-	String menu = null;
+	String menu = null; //setting the menu as null
 	
 	initialise(passenger);
 	// Display instructions to the user
