@@ -1,5 +1,8 @@
 package Airport;
 
+/**
+* class to save data passenger, like POJO
+*/
 public class Passenger {
 	private String firstName;
 	private String lastName;

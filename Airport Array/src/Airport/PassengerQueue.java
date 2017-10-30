@@ -34,7 +34,7 @@ public class PassengerQueue {
 	}
 	
 	
-public void addQueue() {//adding passengers to the queue array
+	public void addQueue() {//adding passengers to the queue array
         
         if (isQueueFull()) {
             System.out.println("Queue is full.Unable to add passenger");
@@ -56,30 +56,30 @@ public void addQueue() {//adding passengers to the queue array
         }
     }
 	
-public void deleteQueue() {//deleting the first passenger in the queue array
-	if (isQueueEmpty()) {
-		System.out.println("Queue is Empty. No data to delete");
-	} else {
-		front++;
-		
-		
-		if(front == capacity-1){
-			System.out.println("Data for passenger "+passengerQueue[front-1].getfirstName()+" "+passengerQueue[front-1].getlastName()+" deleted.");
-			passengerQueue[front-1].setfirstName("null");
-			passengerQueue[front-1].setlastName("null");
-			passengerQueue[front-1].setSecondInQueue(0);
-			front = 0;
+	public void deleteQueue() {//deleting the first passenger in the queue array
+		if (isQueueEmpty()) {
+			System.out.println("Queue is Empty. No data to delete");
 		} else {
-			if(!passengerQueue[front-1].getfirstName().equals("null")){
-			System.out.println("Data for passenger "+passengerQueue[front-1].getfirstName()+" "+passengerQueue[front-1].getlastName()+" deleted.");
-			passengerQueue[front-1].setfirstName("null");
-			passengerQueue[front-1].setlastName("null");
-			passengerQueue[front-1].setSecondInQueue(0);
+			front++;
+			
+			
+			if(front == capacity-1){
+				System.out.println("Data for passenger "+passengerQueue[front-1].getfirstName()+" "+passengerQueue[front-1].getlastName()+" deleted.");
+				passengerQueue[front-1].setfirstName("null");
+				passengerQueue[front-1].setlastName("null");
+				passengerQueue[front-1].setSecondInQueue(0);
+				front = 0;
+			} else {
+				if(!passengerQueue[front-1].getfirstName().equals("null")){
+				System.out.println("Data for passenger "+passengerQueue[front-1].getfirstName()+" "+passengerQueue[front-1].getlastName()+" deleted.");
+				passengerQueue[front-1].setfirstName("null");
+				passengerQueue[front-1].setlastName("null");
+				passengerQueue[front-1].setSecondInQueue(0);
+				}
 			}
+			Size--;
 		}
-		Size--;
 	}
-}
 
 	public void saveQueue(){
 		try {
@@ -145,7 +145,10 @@ public void deleteQueue() {//deleting the first passenger in the queue array
 	}
 	
 	
-	
+	/**
+	* this method used to check whether the queue is full or not
+	* return boolean
+	*/
 	boolean isQueueFull(){
 		boolean status = false;
 		if (Size == 20){
@@ -154,6 +157,11 @@ public void deleteQueue() {//deleting the first passenger in the queue array
 		return status;
 	}
 
+
+	/**
+	* this method used to check whether the queue is empty or not
+	* return boolean
+	*/
 	boolean isQueueEmpty(){
 		boolean status = false;
 		if (Size == 0){
@@ -162,6 +170,9 @@ public void deleteQueue() {//deleting the first passenger in the queue array
 		return status;
 	}
 
+	/**
+	* ALGORITHM to simulate queue passenger
+	*/
 	public void simulateQueue() throws FileNotFoundException {
 		initialize(passengerQueue);//to remove current entries of the queue
 
