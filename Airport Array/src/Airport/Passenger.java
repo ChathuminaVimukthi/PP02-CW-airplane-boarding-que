@@ -1,5 +1,5 @@
 package Airport;
-
+//airport class
 public class Passenger {
 	private String firstName;
 	private String lastName;
