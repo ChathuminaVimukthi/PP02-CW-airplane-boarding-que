@@ -1,10 +1,12 @@
 package Airport;
 
 public class Passenger {
+	//Declare instance variables 
 	private String firstName;
 	private String lastName;
 	private int time;
 	
+	//set and return values with getters and setters 
 	public void setfirstName(String firstName){
 		this.firstName = firstName;
 	}
