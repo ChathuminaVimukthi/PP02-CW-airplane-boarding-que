@@ -1,19 +1,16 @@
 package Airport;
-
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Airport {
-	static Passenger[] passenger = new Passenger[30];
+	static Passenger[] passenger = new Passenger[30];//declaring array of passengers objects
 	public static void main(String[] args) throws FileNotFoundException{
-	PassengerQueue queue = new PassengerQueue(20);
+	PassengerQueue queue = new PassengerQueue(20);//creating a queue data structure with size of 20
 
 	String menu = null;
 	
 	initialise(passenger);
-	
 	do{
 		System.out.println("\n ****************** Welcome to SL Ariways ******************* \n");
 		System.out.println("A:to Add passengers to the boarding queue");
@@ -27,7 +24,6 @@ public class Airport {
 		
 		Scanner sc = new Scanner(System.in);
 		menu = sc.next().toUpperCase();
-		
 		switch(menu){
 		case "A" :{
 			queue.addQueue();
@@ -84,7 +80,7 @@ public class Airport {
 	
 	private static void initialise(Passenger[] passenger) {
 		for(int x=0; x<30;x++){
-			passenger[x]=new Passenger();
+			passenger[x]=new Passenger();//creating new passenger objecr
 			passenger[x].setfirstName("null");
 			
 		}		

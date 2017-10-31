@@ -14,7 +14,7 @@ public class Passenger {
 	public void setfirstName(String firstName){
 		this.firstName = firstName;
 	}
-	
+  
 	/**
 	 * the first name of the passenger
 	 * @return firstName
