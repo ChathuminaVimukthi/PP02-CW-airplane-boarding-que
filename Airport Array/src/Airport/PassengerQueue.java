@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 // create a PassengerQueue class.
 public class PassengerQueue {
-	// enter the capacities of front and last.
+	// set pointer location values
 private int capacity;
 	int front = 0;
 	int last = 0;
@@ -17,7 +17,7 @@ private int capacity;
 	// Use scanner.
 	static Scanner sc = new Scanner(System.in);
 
-	// Avail 20 passengers.
+	// creating an array of 20 passengers.
 	Passenger[] passengerQueue = new Passenger[20];
 
 	//initialize the int variable for queueSize.
@@ -40,7 +40,7 @@ private int capacity;
 	
 public void addQueue() {//adding passengers to the queue array
         
-        if (isQueueFull()) {
+        if (isQueueFull()) {//if queue is full displaying message
             System.out.println("Queue is full.Unable to add passenger");
         } else {
             if(last == capacity-1){
@@ -87,7 +87,7 @@ public void deleteQueue() {//deleting the first passenger in the queue array
 	}
 }
 
-	public void saveQueue(){
+	public void saveQueue(){//method to save queue details to file
 		try {
 			// getting the passenger text file
 			File passengerfile = new File("Passenger.txt");
@@ -111,7 +111,7 @@ public void deleteQueue() {//deleting the first passenger in the queue array
 	
 	
 	
-	public void viewQueue(){
+	public void viewQueue(){//method to view passengers in the queue
 		if(isQueueEmpty()){
 			System.out.println("Empty Queue!! No data to view");
 		}else{
@@ -123,7 +123,7 @@ public void deleteQueue() {//deleting the first passenger in the queue array
 		}
 	}
 	
-	public void load() {
+	public void load() {//method to load data from file
 		Scanner scanning = null;
 		try {
 			// getting  passenger text file
