@@ -13,8 +13,16 @@ public class Passenger {
 	}
 	
 //	Method to return the first name
-	public String getfirstName(){
-		return this.firstName;
+
+	public void setfirstName(String firstName){
+		this.firstName = firstName;
+	}
+  
+	/**
+	 * the first name of the passenger
+	 * @return firstName
+	 */
+  return this.firstName;
 	}
 	
 //	Method to set the last name with a string parameter of the last name
@@ -22,6 +30,7 @@ public class Passenger {
 		this.lastName = lastName;
 	}
 	
+
 //	Method to return the last name
 	public String getlastName(){
 		return this.lastName;
