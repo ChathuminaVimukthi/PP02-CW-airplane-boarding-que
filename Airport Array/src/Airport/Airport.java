@@ -10,7 +10,9 @@ public class Airport {
 
 	String menu = null; //setting the menu as null
 	
-	initialise(passenger);
+	initialize(passenger);
+	
+
 	do{
 		System.out.println("\n ****************** Welcome to SL Ariways ******************* \n");
 		System.out.println("A:to Add passengers to the boarding queue");
@@ -77,8 +79,8 @@ public class Airport {
 	
 	}
 
-	
-	private static void initialise(Passenger[] passenger) {
+	//Initialize array of passengers
+	private static void initialize(Passenger[] passenger) {
 		for(int x=0; x<30;x++){
 			passenger[x]=new Passenger();//creating new passenger objecr
 			passenger[x].setfirstName("null");
