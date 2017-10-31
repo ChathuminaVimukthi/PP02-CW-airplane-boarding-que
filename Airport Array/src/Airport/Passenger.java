@@ -1,16 +1,19 @@
 package Airport;
 
-/**
- * This class represents a Passenger
- */
+//Defines the class names Passenger
 public class Passenger {
+//	Declaration of  private attributes of the class
 	private String firstName;
 	private String lastName;
 	private int time;
 	
-	/**
-	 * Set the first name of the passenger
-	 */
+//	Method to set the first name with a string parameter of the first name
+	public void setfirstName(String firstName){
+		this.firstName = firstName;
+	}
+	
+//	Method to return the first name
+
 	public void setfirstName(String firstName){
 		this.firstName = firstName;
 	}
@@ -19,38 +22,26 @@ public class Passenger {
 	 * the first name of the passenger
 	 * @return firstName
 	 */
-	public String getfirstName(){
-		return this.firstName;
+  return this.firstName;
 	}
 	
-	/**
-	 * Sets the last name of the passenger
-	 * @param lastName
-	 */
+//	Method to set the last name with a string parameter of the last name
 	public void setlastName(String lastName){
 		this.lastName = lastName;
 	}
 	
-	/**
-	 * Return the last name of this passenger
-	 * @return lastName
-	 */
+
+//	Method to return the last name
 	public String getlastName(){
 		return this.lastName;
 	}
 	
-	/**
-	 * Sets the queued time for this passenger
-	 * @param time
-	 */
+//	Make an item second in the queue by checking with the time parameter (in a queue of items)
 	public void setSecondInQueue(int time){
 		this.time = time;
 	}
 	
-	/**
-	 * Returns the time, when the passenger was queued
-	 * @return int(representing time)
-	 */
+//	Return the second item in the queue (in a queue of items)
 	public int getSecondInQueue(){
 		return this.time;
 	}
