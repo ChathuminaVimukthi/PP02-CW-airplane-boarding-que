@@ -1,5 +1,6 @@
 package Airport;
 
+//This Java POJO (Plain Ol' Java Object) contains the first and last names of the passenger, as well as a time.  This has getters and setters for the fields.
 public class Passenger {
 	private String firstName;
 	private String lastName;
