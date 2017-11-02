@@ -4,15 +4,17 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Airport {
-	static Passenger[] passenger = new Passenger[30];//declaring array of passengers objects
+	static Passenger[] passenger = new Passenger[30]; //creates an array of 30 passengers
 	public static void main(String[] args) throws FileNotFoundException{
-	PassengerQueue queue = new PassengerQueue(20);//creating a queue data structure with size of 20
+	PassengerQueue queue = new PassengerQueue(20); //creates queue of passengers
 
 	String menu = null; //setting the menu as null
 	
-	initialize(passenger);
+	initialise(passenger); //initializes the array of passengers setting all of them to null 
 	
-
+	
+	//this outputes the menu to the user	
+		
 	do{
 		System.out.println("\n ****************** Welcome to SL Ariways ******************* \n");
 		System.out.println("A:to Add passengers to the boarding queue");
@@ -24,9 +26,11 @@ public class Airport {
 		System.out.println("X:to Exit the program  \n");
 		System.out.println("Please enter your input");
 		
-		Scanner sc = new Scanner(System.in);
-		menu = sc.next().toUpperCase();
-		switch(menu){
+		Scanner sc = new Scanner(System.in); //gets the entered input from the user
+		menu = sc.next().toUpperCase(); //puts the entered value from the user in uppercase
+		
+		switch(menu){ //chooses the correct case based on user input
+
 		case "A" :{
 			queue.addQueue();
 			break;
@@ -79,8 +83,8 @@ public class Airport {
 	
 	}
 
-	//Initialize array of passengers
-	private static void initialize(Passenger[] passenger) {
+	//this function initialises the array of passengers
+	private static void initialise(Passenger[] passenger) {	
 		for(int x=0; x<30;x++){
 			passenger[x]=new Passenger();//creating new passenger objecr
 			passenger[x].setfirstName("null");
