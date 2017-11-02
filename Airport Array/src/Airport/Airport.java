@@ -1,6 +1,4 @@
 package Airport;
-
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -10,7 +8,7 @@ public class Airport {
 	public static void main(String[] args) throws FileNotFoundException{
 	PassengerQueue queue = new PassengerQueue(20); //creates queue of passengers
 
-	String menu = null;
+	String menu = null; //setting the menu as null
 	
 	initialise(passenger); //initializes the array of passengers setting all of them to null 
 	
@@ -32,6 +30,7 @@ public class Airport {
 		menu = sc.next().toUpperCase(); //puts the entered value from the user in uppercase
 		
 		switch(menu){ //chooses the correct case based on user input
+
 		case "A" :{
 			queue.addQueue();
 			break;
@@ -85,9 +84,9 @@ public class Airport {
 	}
 
 	//this function initialises the array of passengers
-	private static void initialise(Passenger[] passenger) {
+	private static void initialise(Passenger[] passenger) {	
 		for(int x=0; x<30;x++){
-			passenger[x]=new Passenger();
+			passenger[x]=new Passenger();//creating new passenger objecr
 			passenger[x].setfirstName("null");
 			
 		}		
